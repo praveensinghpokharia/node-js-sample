@@ -2,8 +2,16 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ec2-user/nodejs
+    destination: /home/ec2-user/test
+
+permissions:
+   - object: /home/ec2-user/test
+     pattern: "**"
+     mode: 755
+     type:
+       - file
+
 hooks:
-  ApplicationStart:
-  - location: /home/ec2-user/aa.sh
-    runas: root
+AfterInstall:
+   - location: /home/ec2-user/aa.sh
+     runas: root
