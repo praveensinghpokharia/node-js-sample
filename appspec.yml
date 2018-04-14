@@ -7,7 +7,7 @@ files:
 permissions:
    - object: /home/ec2-user/test
      pattern: "**"
-     mode: 755
+     mode: 777
      type:
        - file
 
@@ -16,5 +16,5 @@ hooks:
      - location: /home/ec2-user/aa.sh
        runas: root
   ApplicationInstall:
-     - location: scripts/aa.sh
+     - location: home/ec2-user/scripts/aa.sh
        runas: root
