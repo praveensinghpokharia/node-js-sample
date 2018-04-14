@@ -12,6 +12,6 @@ permissions:
        - file
 
 hooks:
-ApplicationStart:
+AfterInstall:
      - location: /home/ec2-user/aa.sh
        runas: root
