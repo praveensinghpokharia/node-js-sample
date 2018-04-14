@@ -12,14 +12,6 @@ permissions:
        - file
 
 hooks:
-DownloadBundle:
-     - location: /opt/codedeploy-agent/deployment-root/
-       runas: root
-
-install:
-     - location: /home/ec2-user/test
-       runas: root
-
 ApplicationStart:
      - location: /home/ec2-user/aa.sh
        runas: root
